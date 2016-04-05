@@ -1,6 +1,6 @@
-### React Redux Template
+### UO Website
 
-Should get you started
+[userorientated website](http://userorientated.com).
 
 ### Prerequisites
 ```
