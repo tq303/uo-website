@@ -1,44 +1,4 @@
-.modal {
-
-    position: absolute;
-    left: 5%;
-    top: 0;
-    width: 90%;
-    background: $modal-background;
-    box-sizing: border-box;
-    padding: 12px;
-    box-shadow: 0px 0px 11px 4px black;
-    border-radius: 6px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    z-index: 2;
-    font-family: 'Junction';
-
-    p {
-
-        padding: 4px 0;
-        margin: 4px 0;
-
-        &.error {
-            color: red;
-        }
-    }
-
-    input {
-        width: 98%;
-        margin-bottom: 12px;
-    }
-
-    button {
-
-        &:nth-child(1) {
-
-        }
-        &:nth-child(2) {
-            float: right;
-        }
-    }
-}
+.modal {}
 
 .modal-top-down {
 
@@ -46,7 +6,7 @@
 
     &.modal-top-down-enter {
       top: -100%;
-  }
+    }
 
   &.modal-top-down-enter.modal-top-down-enter-active {
       top: 0;

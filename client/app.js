@@ -1,5 +1,5 @@
 // load sass
-require('../styles/style.scss');
+require('./styles/style.scss');
 
 // javascript
 import 'babel-polyfill'
