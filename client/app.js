@@ -1,3 +1,7 @@
+// load sass
+require('../styles/style.scss');
+
+// javascript
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
@@ -30,7 +34,7 @@ render (
     <Provider store={ store }>
         <Main />
     </Provider>,
-    document.getElementById('ui-animation')
+    document.getElementById('app')
 )
 
 // subribe to store changes

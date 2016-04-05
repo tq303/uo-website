@@ -7,8 +7,6 @@ import Btn from '../components/Button'
 // actions
 import { reset } from '../actions'
 
-require('../styles/style.scss');
-
 // UI
 class Main extends Component {
 
