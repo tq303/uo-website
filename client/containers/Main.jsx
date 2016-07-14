@@ -4,6 +4,10 @@ import { connect } from 'react-redux'
 // components
 import Btn from '../components/Button'
 
+// sections
+import Header  from './Header'
+import Summary from './Summary'
+
 // actions
 import { reset } from '../actions'
 
@@ -11,44 +15,33 @@ import { reset } from '../actions'
 class Main extends Component {
 
     render() {
+
         return (
-            <div class="container">
-        
-		        <div id="uo-cv">
+        	<div>
 
-		            <h1>{{title}}</h1>
-		            <p>{{description}}</p>
+	        	<Header />
 
-		            <div class="row videos">
-		                
-		                <div class="col-md-4 video-container">
+	            <div className="container">        		
 
-		                    <iframe src="{{ embed }}"
-		                            width="320"
-		                            height="240"
-		                            frameborder="0"
-		                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
-		                    </iframe>
+			        <div id="uo-cv">
 
-		                    <p>
-		                        <a href="{{ link }}" target="_blank">{{ title }}</a>
-		                    </p>
+			            <h1>{ this.props.title }</h1>
+			            <p>{ this.props.description }</p>
 
-		                </div>
 
-		            </div>
+			            <div className="videos row">
+			            	{ // list videos
+			            		this.props.videos.map( v => {
+									return(<Summary embed={ v.embed } link={ v.link } title={ v.title } />)
+			            		})
+			            	}
+		            	</div>
 
-		            <div class="social">
+			        </div>
 
-		                <p v-repeat="social">
-		                    <a href='{{ url }}' target="_blank" class='symbol' title='{{ cssTitle }}'></a>
-		                </p>
+			    </div>
 
-		            </div>
-
-		        </div>
-
-		    </div>
+        	</div>
         )
     }
 
@@ -56,7 +49,12 @@ class Main extends Component {
 
 Main.propTypes = {}
 
-const mapStateToProps = ( state, ownProps ) => ({})
+const mapStateToProps = ( state, ownProps ) => ({
+	title:       state.title,
+	videos:      state.videos,
+	social:      state.social,
+	description: state.description,
+})
 
 const mapDispatchToProps = ( dispatch, ownProps ) => ({})
 

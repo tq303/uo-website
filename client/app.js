@@ -20,7 +20,13 @@ import initialState from './constants/initialState'
 const REDUX_STATE = 'redux-state'
 
 // load from local storage
-const loadState = storage.get( REDUX_STATE ) || initialState
+
+// load from local storage
+// const loadState = storage.get( REDUX_STATE ) || initialState
+
+// load & save default
+const loadState = initialState
+storage.set( REDUX_STATE, loadState )
 
 const store = createStore(
     reducers,
@@ -39,3 +45,5 @@ render (
 
 // subribe to store changes
 store.subscribe(()=> {})
+
+console.log( loadState )
