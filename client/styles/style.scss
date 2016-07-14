@@ -5,6 +5,7 @@ $fa-font-path: "~../../node_modules/font-awesome/fonts";
 @import "~../../node_modules/font-awesome/scss/font-awesome.scss";
 
 // bootstrap
+// @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 $icon-font-path: "~../../node_modules/bootstrap-sass/assets/fonts";
 @import "~../../node_modules/font-awesome/scss/font-awesome.scss";
 
@@ -23,3 +24,67 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+body {
+	background: #232c35;
+	font-family: 'GIRegular';
+	font-weight: normal;
+	font-style: normal;
+}
+
+header {
+	width: 320px;
+	margin: 0 auto;
+}
+
+// mixins
+@mixin top-spacer {
+	padding-top: 64px;
+}
+
+// main body
+#uo-cv {
+
+	h1, p {
+		text-align: center;
+		color: $baby-blue;
+	}
+
+	.videos {
+
+		@include top-spacer;
+
+		.video-container {
+			iframe {
+				width: 100%;
+			}
+			p {
+				a {
+					color: $baby-blue;
+					font-size: 14px;
+				}
+			}
+		}		
+	}
+
+	.social {
+
+		width: 320px;
+		margin: 0 auto;
+
+		@include top-spacer;
+
+		p {
+			width: 50%;
+			display: inline-block;
+			a {
+				color: $baby-blue;
+				text-align: center;
+				font-size: 44px;
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+

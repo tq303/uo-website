@@ -12,7 +12,51 @@ class Main extends Component {
 
     render() {
         return (
-            <div></div>
+            <div class="container">
+        
+		        <div id="uo-cv">
+
+		            <h1>{{title}}</h1>
+		            <p>{{description}}</p>
+
+		            <!-- CV videos -->
+		            <div class="row videos">
+		                
+		                <!-- loop videos -->
+		                <div class="col-md-4 video-container"
+		                     v-repeat="videos">
+
+		                    <!-- video -->
+		                    <iframe src="{{ embed }}"
+		                            width="320"
+		                            height="240"
+		                            frameborder="0"
+		                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+		                    </iframe>
+
+		                    <!-- link -->
+		                    <p>
+		                        <a href="{{ link }}" target="_blank">{{ title }}</a>
+		                    </p>
+
+		                </div>
+
+		            </div>
+
+		            <!-- social media -->
+		            <div class="social">
+
+		                <!-- loop social -->
+		                <p v-repeat="social">
+		                    <a href='{{ url }}' target="_blank" class='symbol' title='{{ cssTitle }}'></a>
+		                </p>
+
+		            </div>
+
+		        </div>
+
+
+		    </div>
         )
     }
 
