@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Mono Social Icons Font';
+    font-family: 'uo-font';
     src: url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.eot');
     src: url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
          url('../fonts/monosocialiconsfont/MonoSocialIconsFont-1.10.woff') format('woff'),
@@ -11,7 +11,7 @@
 }
 
 .symbol, a.symbol:before {
-    font-family: 'Mono Social Icons Font';
+    font-family: 'uo-font';
     -webkit-text-rendering: optimizeLegibility;
     -moz-text-rendering: optimizeLegibility;
     -ms-text-rendering: optimizeLegibility;

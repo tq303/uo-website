@@ -1,7 +1,17 @@
 export default {
 	title: 'Welcome to userorientated',
 	description: 'Art created by the people for the people',
-	videos: [
+	videos: [	
+		{
+			title: 'Under Cover',
+			embed: 'https://player.vimeo.com/video/159690169',
+			link:  'https://vimeo.com/159690169'
+		},
+		{
+			title: 'LED Strip, Kinect Zonal Sensing',
+			embed: 'https://player.vimeo.com/video/145838746',
+			link:  'https://vimeo.com/145838746'
+		},
 		{
 			title: 'Tunnel Vision - Geometry Test #1',
 			embed: 'https://player.vimeo.com/video/138565151',
