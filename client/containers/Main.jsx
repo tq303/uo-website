@@ -38,7 +38,7 @@ class Main extends Component {
 			            	}
 		            	</div>
 
-		            	<div class="social">
+		            	<div className="social">
 
 		            		{ // list social media
 		            			this.props.social.map( s => {
