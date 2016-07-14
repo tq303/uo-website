@@ -7,6 +7,7 @@ import Btn from '../components/Button'
 // sections
 import Header  from './Header'
 import Summary from './Summary'
+import Social  from './Social'
 
 // actions
 import { reset } from '../actions'
@@ -37,6 +38,16 @@ class Main extends Component {
 			            	}
 		            	</div>
 
+		            	<div class="social">
+
+		            		{ // list social media
+		            			this.props.social.map( s => {
+									return <Social url={ s.url } cssTitle={ s.cssTitle } />
+			            		})
+		            		}
+
+						</div>
+
 			        </div>
 
 			    </div>
@@ -44,7 +55,6 @@ class Main extends Component {
         	</div>
         )
     }
-
 }
 
 Main.propTypes = {}

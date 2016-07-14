@@ -45,5 +45,3 @@ render (
 
 // subribe to store changes
 store.subscribe(()=> {})
-
-console.log( loadState )
