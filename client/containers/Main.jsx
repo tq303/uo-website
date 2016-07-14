@@ -19,14 +19,10 @@ class Main extends Component {
 		            <h1>{{title}}</h1>
 		            <p>{{description}}</p>
 
-		            <!-- CV videos -->
 		            <div class="row videos">
 		                
-		                <!-- loop videos -->
-		                <div class="col-md-4 video-container"
-		                     v-repeat="videos">
+		                <div class="col-md-4 video-container">
 
-		                    <!-- video -->
 		                    <iframe src="{{ embed }}"
 		                            width="320"
 		                            height="240"
@@ -34,7 +30,6 @@ class Main extends Component {
 		                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
 		                    </iframe>
 
-		                    <!-- link -->
 		                    <p>
 		                        <a href="{{ link }}" target="_blank">{{ title }}</a>
 		                    </p>
@@ -43,10 +38,8 @@ class Main extends Component {
 
 		            </div>
 
-		            <!-- social media -->
 		            <div class="social">
 
-		                <!-- loop social -->
 		                <p v-repeat="social">
 		                    <a href='{{ url }}' target="_blank" class='symbol' title='{{ cssTitle }}'></a>
 		                </p>
@@ -54,7 +47,6 @@ class Main extends Component {
 		            </div>
 
 		        </div>
-
 
 		    </div>
         )
